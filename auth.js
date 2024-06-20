@@ -1,9 +1,7 @@
 // Definimos un objeto con usuarios y sus contraseñas
 const user = {
-    'lablak.imad@gmail.com':'mi clave',
+    'lablak.imad@gmail.com':'1010',
 };
-
-
 
 // Verificar si el usuario ya está autenticado (verificado)
 if (localStorage.getItem('estaAutenticado') === 'true') {
@@ -18,7 +16,7 @@ const password = queryParametros.get('password');
 
 
 // Si hay valores de correo y contraseña en el URL
-if (email && password) {
+if (email && password && user[email] && user[email] === password) {
     /* Verificaremos si las identificaciones (credenciales de acceso)
     son válidas según el objeto usuarios /
     if (user[email] && user[email] === password) {
@@ -31,5 +29,5 @@ if (email && password) {
         // Si las credenciales no son válidas, mostramos un mensaje de error
         localStorage.removeItem('estaAutenticado');
         alert('Correo electrónico o contraseña incorrectos');
-        window.location.href = 'iniciar.html';
+        window.location.href = 'log-in.html';
     }

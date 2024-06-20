@@ -17,7 +17,7 @@ function manejarInicioSesion() {
 
 // Function para iniciar sesión
 function iniciarSesion(event) {
-debugger
+
     // Seleccionar el checkbox
     const checkbox = document.getElementById('checkboxSesion');
     // Seleccionar el campo de correo electrónico
